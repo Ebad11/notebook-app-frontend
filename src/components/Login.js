@@ -1,8 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 function Login(props) {
     let navigate= useNavigate();
     const [credentials, setCredentials] = useState({email:"", password:""});
+
+    useEffect(() => {
+        if(localStorage.getItem("token"))
+        {
+            navigate("/");
+       
+        // eslint-disable-next-line
+    }}, [])
+
     async function handleSubmit(e)
     {
         e.preventDefault();

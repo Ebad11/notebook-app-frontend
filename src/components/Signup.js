@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 function Signup(props) {
 
     let navigate= useNavigate();
     const [credentials, setCredentials] = useState({name:"", email:"", password:"", cpassword:""});
     const {name,email,password}= credentials;
+
+    useEffect(() => {
+        if(localStorage.getItem("token"))
+        {
+            navigate("/");
+       
+        // eslint-disable-next-line
+    }}, [])
 
     async function handleSubmit(e)
     {
