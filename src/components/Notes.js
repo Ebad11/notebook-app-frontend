@@ -17,7 +17,7 @@ function Notes(props) {
         }
         else
         {
-          navigate("/login");
+          navigate("/signup");
         }
         // eslint-disable-next-line
     }, [])
