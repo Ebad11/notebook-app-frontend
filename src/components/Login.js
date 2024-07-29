@@ -6,7 +6,7 @@ function Login(props) {
     async function handleSubmit(e)
     {
         e.preventDefault();
-        const response = await fetch("https:notebook-app-backend-ebadshk.vercel.app/api/auth/login", {
+        const response = await fetch("https://notebook-app-backend-ebadshk.vercel.app/api/auth/login", {
             method: "POST", 
             headers: {
               "Content-Type": "application/json",
